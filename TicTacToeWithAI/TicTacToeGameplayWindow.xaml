@@ -1,0 +1,59 @@
+﻿<Window x:Class="TicTacToeWithAI.TicTacToeGameplayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicTacToeWithAI"
+        mc:Ignorable="d"
+        Title="TicTacToe" Height="500" Width="450">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="wallpaper.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="253*"/>
+            <ColumnDefinition Width="139*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Margin="71,75,57,119" Grid.ColumnSpan="2" Name="TicTacToeGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="256*"/>
+                <ColumnDefinition Width="39*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Button1" Content="" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="88" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" Background="White" FontSize="24"/>
+            <Button x:Name="Button2" Content="" HorizontalAlignment="Left" Height="80" Margin="105,0,0,0" VerticalAlignment="Top" Width="88" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" Background="White" FontSize="26"/>
+            <Button x:Name="Button3" Content="" HorizontalAlignment="Left" Height="80" Margin="207,0,0,0" VerticalAlignment="Top" Width="88" Grid.ColumnSpan="2" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" Background="White" FontSize="26"/>
+            <Button x:Name="Button4" Content="" HorizontalAlignment="Left" Height="80" Margin="0,94,0,0" VerticalAlignment="Top" Width="88" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" Background="White" FontSize="26"/>
+            <Button x:Name="Button5" Content="" HorizontalAlignment="Left" Height="80" Margin="105,94,0,0" VerticalAlignment="Top" Width="88" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" Background="White" FontSize="26"/>
+            <Button x:Name="Button6" Content="" HorizontalAlignment="Left" Height="80" Margin="207,94,0,0" VerticalAlignment="Top" Width="88" Grid.ColumnSpan="2" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" Background="White" FontSize="26"/>
+            <Button x:Name="Button7" Content="" HorizontalAlignment="Left" Height="80" Margin="0,187,0,0" VerticalAlignment="Top" Width="88" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" Background="White" FontSize="26"/>
+            <Button x:Name="Button8" Content="" HorizontalAlignment="Left" Height="80" Margin="105,187,0,0" VerticalAlignment="Top" Width="88" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" Background="White" FontSize="26"/>
+            <Button x:Name="Button9" Content="" HorizontalAlignment="Left" Height="80" Margin="207,187,0,0" VerticalAlignment="Top" Width="88" Grid.ColumnSpan="2" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" Background="White" FontSize="26"/>
+        </Grid>
+        <Button Content="Reset Game" HorizontalAlignment="Left" Height="38" Margin="73,371,0,0" VerticalAlignment="Top" Width="132" Click="ResetGame" FontWeight="Bold">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF94E2E6" Offset="0"/>
+                    <GradientStop Color="#FF00F3FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Border Grid.ColumnSpan="2" Margin="66,13,34,399">
+            <Grid Background="White" Margin="-29,0,0,0">
+                <Label x:Name="FirstPlayerLabel" Content="Player1 Win Count:" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="133" MinWidth="110" MinHeight="34" FontWeight="Bold"/>
+                <Label x:Name="SecondPlayerLabel" Content="Player2 Win Count:" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="147" Margin="224,0,0,0" MinWidth="126" MinHeight="34" FontWeight="Bold"/>
+                <Label Content="Draw Count:" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="82" Margin="127,0,0,0" FontWeight="Bold"/>
+                <Label x:Name="XWinCount" Content="0" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="44" RenderTransformOrigin="-0.091,0.588" Margin="38,23,0,0" FontSize="18" FontWeight="Bold"/>
+                <Label x:Name="DrawCount" Content="0" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="44" RenderTransformOrigin="-0.068,0.588" Margin="152,23,0,0" FontSize="18" FontWeight="Bold"/>
+                <Label x:Name="OWinCount" Content="0" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="44" RenderTransformOrigin="0.159,0.647" Margin="263,23,0,0" FontSize="18" FontWeight="Bold"/>
+            </Grid>
+        </Border>
+        <Button Content="Reset Counters" HorizontalAlignment="Left" Height="38" Margin="233,371,0,0" VerticalAlignment="Top" Width="132" Click="ResetCounters" Grid.ColumnSpan="2" Name ="ResetCountersButton" FontWeight="Bold">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF94E2E6" Offset="0"/>
+                    <GradientStop Color="#FF00F3FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>
